@@ -9,6 +9,12 @@ namespace Com.MyCompany.MyGame
     {
         #region Private Serializable Fields
 
+        /// <summary>
+        /// The maximum number of players per room. When a room is full, it can't be joined by new players, and so new room will be created.
+        /// </summary>
+        [Tooltip("The maximum number of players per room. When a room is full, it can't be joined by new players, and so new room will be created")]
+        [SerializeField]
+        private byte maxPlayersPerRoom = 4;
 
         #endregion
 
@@ -23,6 +29,7 @@ namespace Com.MyCompany.MyGame
 
 
         #endregion
+
 
         #region MonoBehaviourPunCallbacks Callbacks
 
@@ -44,7 +51,7 @@ namespace Com.MyCompany.MyGame
             Debug.Log("PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
 
             // #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
-            PhotonNetwork.CreateRoom(null, new RoomOptions());
+            PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = maxPlayersPerRoom });
         }
 
         public override void OnJoinedRoom()
@@ -53,6 +60,7 @@ namespace Com.MyCompany.MyGame
         }
 
         #endregion
+
 
         #region MonoBehaviour CallBacks
 
