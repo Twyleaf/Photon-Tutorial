@@ -397,11 +397,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2427961292987024147, guid: 163991d5a28111c4e8c12a04eacadfd8,
-        type: 3}
-      propertyPath: followOnStart
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6242492980178080516, guid: 163991d5a28111c4e8c12a04eacadfd8,
         type: 3}
       propertyPath: m_Name
@@ -469,3 +464,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 163991d5a28111c4e8c12a04eacadfd8, type: 3}
+--- !u!1 &6242492981486409635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6242492980178080516, guid: 163991d5a28111c4e8c12a04eacadfd8,
+    type: 3}
+  m_PrefabInstance: {fileID: 6242492981486409634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6242492981486409636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6242492981486409635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 1
+    SynchronizeType: 1
+    Name: Speed
+  - Type: 1
+    SynchronizeType: 1
+    Name: Direction
+  - Type: 4
+    SynchronizeType: 0
+    Name: Hi
+  - Type: 9
+    SynchronizeType: 1
+    Name: Jump
+  m_SynchronizeLayers:
+  - SynchronizeType: 0
+    LayerIndex: 0
